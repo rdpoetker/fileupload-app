@@ -1,0 +1,10 @@
+{
+  "name": "fileupload-spring-boot",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-resource": "~1.5.0",
+    "bootstrap-css-only": "~3.3.0",
+    "ng-file-upload-shim": "^12.2.13",
+    "ng-file-upload": "^12.2.13"
+  }
+}

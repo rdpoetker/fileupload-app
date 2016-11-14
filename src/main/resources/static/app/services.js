@@ -15,8 +15,8 @@
 	
 	self.getFiles = getFiles;
 	
-	function getFiles(callback) {
-	   return GetFiles.query(callback);
+	function getFiles() {
+	   return GetFiles.query();
 	}
 		
   }

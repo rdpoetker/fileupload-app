@@ -18,6 +18,12 @@ import org.junit.Test;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
+/**
+ * Test fixture for FileSystemStorageService.
+ * 
+ * @author rdpoetker
+ *
+ */
 public class FileSystemStorageServiceTest {
 		
 	@Test

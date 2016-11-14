@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * Interface for storing and retrieving files.
  * 
- * @author russell
+ * @author rdpoetker
  *
  */
 public interface StorageService {

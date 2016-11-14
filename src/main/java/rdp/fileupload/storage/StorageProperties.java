@@ -2,6 +2,12 @@ package rdp.fileupload.storage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * Config props for StorageService.
+ * 
+ * @author rdpoetker
+ *
+ */
 @ConfigurationProperties("storage")
 public class StorageProperties {
 

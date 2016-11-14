@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * Test fixture for FileMetadata.
  * 
- * @author russell
+ * @author rdpoetker
  *
  */
 public class FileMetadataTest {

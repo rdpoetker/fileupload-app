@@ -3,7 +3,7 @@ package rdp.fileupload.storage;
 /**
  * Exception for runtime exceptions occurring in storage service.
  * 
- * @author rdp
+ * @author rdpoetker
  *
  */
 public class StorageException extends RuntimeException {

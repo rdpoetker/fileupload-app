@@ -27,7 +27,7 @@ import rdp.fileupload.storage.StorageService;
 /**
  * Test fixture for FileUploadController.
  * 
- * @author russell
+ * @author rdpoetker
  *
  */
 @RunWith(JMockit.class)

@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Test fixture for StorageProperties.
  * 
- * @author russell
+ * @author rdpoetker
  *
  */
 public class StoragePropertiesTest {

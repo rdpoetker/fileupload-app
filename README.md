@@ -1,13 +1,13 @@
 # fileupload-app
 
-This app is sample app demonstrating file upload in a Single Page Application (SPA) using AngularJS along with a REST service using Spring. The app is built to use Spring Boot for runtime.  
+This app is sample File Upload Single Page Application (SPA) using AngularJS along with a REST service using Spring. The app is built to use Spring Boot for runtime.  
 
-To run the program, clone or download this project and perform the following steps:
+What you’ll need installed:
 
-What you’ll need
+1. JDK 1.8 or later
+2. Maven 3.0+
 
--JDK 1.8 or later
--Maven 3.0+
+Once you have the items above installed, clone or download this project and perform the following steps:
 
 cd to the project root directory and type:
 

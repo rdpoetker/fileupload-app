@@ -17,9 +17,9 @@ mvn spring-boot:run
 Open a web browser, go to http://localhost:8080/
 
 ### Notes
-  *The largest file that can be uploaded is 1MB.
-  *The files are simply written to a directory in the project called upload-dir.  This directory is cleaned each time the app starts.
-  *File metadata is stored in an in memory h2 DB.
+1. The largest file that can be uploaded is 1MB.
+2. The files are simply written to a directory in the project called upload-dir.  This directory is cleaned each time the app starts.
+3. File metadata is stored in an in memory h2 DB.
 
 ## Testing the app
 To execute the tests:

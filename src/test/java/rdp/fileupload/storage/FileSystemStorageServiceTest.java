@@ -127,4 +127,21 @@ public class FileSystemStorageServiceTest {
 		
 	    service.loadAsResource("testfilename");
 	}
+	
+	@Test
+	public void delete() throws IOException, URISyntaxException {
+		
+		final StorageProperties props = new StorageProperties();
+		
+		final FileSystemStorageService service = new FileSystemStorageService(props);
+		
+		new MockUp<Files>() {
+	        @Mock boolean deleteIfExists(Path target) throws IOException { 
+	        	Assert.assertEquals("upload-dir/testfilename", target.toString());	        	
+	        	return true; 
+	        }
+		};
+						
+	    service.delete("testfilename");
+	}
 }

@@ -42,6 +42,22 @@ public class FileSystemStorageService implements StorageService {
             throw new StorageException("Failed to store file " + file.getOriginalFilename(), e);
         }
     }
+    
+    @Override
+    public boolean delete(String filename) {
+    	
+    	final Path path = load( filename );
+    	
+    	boolean result = false;
+    	
+    	try {
+    		result = Files.deleteIfExists(path);
+		} catch (IOException e) {
+			throw new StorageException("Failed to delete file " + filename, e);
+		}
+    	
+    	return result;
+    }
 
     protected Path load(String filename) {
         return rootLocation.resolve(filename);
@@ -51,7 +67,7 @@ public class FileSystemStorageService implements StorageService {
     public Resource loadAsResource(String filename) {
         try {
                     	
-            Resource resource = getResource( load(filename) );
+            final Resource resource = getResource( load(filename) );
             
             if(resource.exists() || resource.isReadable()) {
                 return resource;

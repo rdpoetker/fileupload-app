@@ -24,6 +24,15 @@ public interface StorageService {
     void store(MultipartFile file);
 
     /**
+     * Delete the file from the storage with the filename.
+     * 
+     * @param filename
+     * 
+     * @return true if deleted, false if not
+     */
+    boolean delete(String filename);
+    
+    /**
      * Load and return the Resource file of the filename passed as an param.
      * 
      * @param filename

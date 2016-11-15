@@ -43,6 +43,15 @@
 	        });
 	    };
 	    
+	    $scope.deleteFile = function(fileid) {
+	    	FileUpSvc.
+	    	deleteFile(fileid)
+	    	.$promise.then( function( upfls ) {
+	    		refreshUpFiles();
+            });
+		    
+		};
+	    
 	    refreshUpFiles();
 	    
   };

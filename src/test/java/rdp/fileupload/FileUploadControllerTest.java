@@ -86,6 +86,27 @@ public class FileUploadControllerTest {
 	}
 	
 	@Test
+	public void deleteFile() {
+		
+		final FileUploadController bean = new FileUploadController(storageService, fileMetaRepo);
+					
+		new Expectations() {{
+			
+			fileMetaRepo.findOne(new Long("123")); result = mockFileMeta;
+	    	
+			mockFileMeta.getFileName(); result = "testfilename";
+			
+	    	storageService.delete("testfilename"); result = true;
+	    		
+	    	fileMetaRepo.delete(mockFileMeta);
+	    }};
+	    
+	    final ResponseEntity<Void> result = bean.deleteFile("123");
+		
+		Assert.assertEquals(HttpStatus.OK, result.getStatusCode());
+	}
+	
+	@Test
 	public void serveFile() {
 		
 		final FileUploadController bean = new FileUploadController(storageService, fileMetaRepo);

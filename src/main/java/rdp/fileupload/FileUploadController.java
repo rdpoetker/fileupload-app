@@ -103,11 +103,10 @@ public class FileUploadController {
      * @param filename
      * @return return file resource
      */
-    @GetMapping("/{filename:.+}")
-    @ResponseBody
+    @RequestMapping(path="/{filename:.+}", method = RequestMethod.GET)
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
     	
-        Resource file = storageService.loadAsResource(filename);
+        final Resource file = storageService.loadAsResource(filename);
         
         return ResponseEntity
                 .ok()
@@ -115,7 +114,31 @@ public class FileUploadController {
                 .body(file);
     }
 
-    
+    @RequestMapping(path="/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Void> deleteFile(@PathVariable String id) {
+    	
+    	final FileMetadata meta = fileMetaRepo.findOne(new Long(id));
+    	
+    	if( meta != null ) {
+    	
+    		final boolean result = storageService.delete(meta.getFileName());
+    		
+    		if( !result ) {
+    		
+    			LOGGER.warn("False reading on delete file from storage, but found in DB: "+meta.getFileName());
+    		}
+    		
+    		// We'll delete anyway and go with the logging above, but should be better...
+    		fileMetaRepo.delete(meta);
+    	} else {
+    		
+    		return ResponseEntity.notFound().build();
+    	}
+                
+        return ResponseEntity
+                .ok()
+                .build();
+    }
     
     protected Date getCurrentDate() {
     	return new Date();

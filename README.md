@@ -12,7 +12,7 @@ Once you have the items above installed, clone or download this project and perf
 
 cd to the project root directory and type:
 
-mvn spring-boot:run
+`mvn spring-boot:run`
 
 Open a web browser, go to http://localhost:8080/
 
@@ -24,7 +24,7 @@ Open a web browser, go to http://localhost:8080/
 ## Testing the app
 To execute the tests:
 
-mvn clean test
+`mvn clean test`
 
 The test goal will execute jUnit tests and Jasmine angular tests.
 

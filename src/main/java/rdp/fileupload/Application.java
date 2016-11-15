@@ -9,6 +9,12 @@ import org.springframework.context.annotation.Bean;
 import rdp.fileupload.storage.StorageProperties;
 import rdp.fileupload.storage.StorageService;
 
+/**
+ * Application boot class for Spring boot.
+ * 
+ * @author rdpoetker
+ *
+ */
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)
 public class Application {

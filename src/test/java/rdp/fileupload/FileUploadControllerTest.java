@@ -107,6 +107,21 @@ public class FileUploadControllerTest {
 	}
 	
 	@Test
+	public void deleteFileNotFound() {
+		
+		final FileUploadController bean = new FileUploadController(storageService, fileMetaRepo);
+					
+		new Expectations() {{
+			
+			fileMetaRepo.findOne(new Long("123")); result = null;
+	    }};
+	    
+	    final ResponseEntity<Void> result = bean.deleteFile("123");
+		
+		Assert.assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
+	}
+	
+	@Test
 	public void serveFile() {
 		
 		final FileUploadController bean = new FileUploadController(storageService, fileMetaRepo);

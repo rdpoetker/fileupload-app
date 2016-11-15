@@ -14,7 +14,9 @@
             .getFiles()
             .$promise.then( function( upfls ) {
             	$scope.upFiles = upfls ? upfls : [];
-            });
+            }, function (resp) {
+	            $scope.errorMessage = 'Error getting files: ' + resp.status;
+	        });
 	    };
 	    
 	    function resetForm() {
@@ -48,7 +50,9 @@
 	    	deleteFile(fileid)
 	    	.$promise.then( function( upfls ) {
 	    		refreshUpFiles();
-            });
+            }, function (resp) {
+	            $scope.errorMessage = 'Error deleting file: ' + resp.status;
+	        });
 		    
 		};
 	    

@@ -14,7 +14,7 @@ cd to the project root directory and type:
 
 `mvn spring-boot:run`
 
-Open a web browser, go to http://localhost:8080/
+Open a web browser, go to [http://localhost:8080/](http://localhost:8080/)
 
 ### Notes
 1. The largest file that can be uploaded is 1MB.

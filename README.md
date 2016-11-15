@@ -2,7 +2,8 @@
 
 This app is sample File Upload Single Page Application (SPA) using AngularJS along with a REST service using Spring. The app is built to use Spring Boot for runtime.  
 
-What you’ll need installed:
+## Running the app
+What you’ll need installed to run the program:
 
 1. JDK 1.8 or later
 2. Maven 3.0+
@@ -15,8 +16,20 @@ mvn spring-boot:run
 
 Open a web browser, go to http://localhost:8080/
 
+### Notes
+  *The largest file that can be uploaded is 1MB.
+  *The files are simply written to a directory in the project called upload-dir.  This directory is cleaned each time the app starts.
+  *File metadata is stored in an in memory h2 DB.
+
+## Testing the app
 To execute the tests:
 
 mvn clean test
 
 The test goal will execute jUnit tests and Jasmine angular tests.
+
+## Design considerations:
+
+This is a simple sample project for demonstrating AngularJS SPA and Spring IO/Boot frameworks.  Of course, you would not want to use this code as is in production.  For example, there is no security (authentication/authorization) and a more capable DB should be used for storing files and metadata (maybe something MongoDB).
+
+-rdp

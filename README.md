@@ -1,5 +1,10 @@
 # fileupload-app
 
+### 2022 Note
+*This project is now somewhat outdated and shouldn't be used for reference.
+I would code some parts differently now.
+I'll try to modernize it soon.*
+
 This app is sample File Upload Single Page Application (SPA) using AngularJS along with a REST service using Spring. The app is built to use Spring Boot for runtime.  
 
 ## Running the app

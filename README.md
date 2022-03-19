@@ -1,7 +1,7 @@
 # fileupload-app
 
 ### 2022 Note
-*This project is now somewhat outdated and shouldn't be used for reference.
+*This project is now outdated and shouldn't be used for reference.
 I would code some parts differently now.
 I'll try to modernize it soon.*
 
